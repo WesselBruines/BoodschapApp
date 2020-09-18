@@ -1,0 +1,12 @@
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\IngredientDB.dll.config
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\IngredientDB.dll
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\IngredientDB.pdb
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\EntityFramework.dll
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\EntityFramework.xml
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\obj\Debug\IngredientDB.csprojAssemblyReference.cache
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\obj\Debug\IngredientDB.csproj.CoreCompileInputs.cache
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\obj\Debug\IngredientDB.csproj.CopyComplete
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\obj\Debug\IngredientDB.dll
+C:\Users\anne\source\repos\BoodschappenApp\IngredientDB\obj\Debug\IngredientDB.pdb

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<IngredientDB.InventoryIngredient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dit is in je koelkast</h2>
+
+<p>
+    @Html.ActionLink("Voeg toe", "Toevoegen")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Naam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoeveelheid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eenheid)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Naam)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hoeveelheid)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Eenheid)
+    </td>
+    <td>
+        @Html.ActionLink("Hoeveelheid veranderen", "Edit", new { id = item.InventoryIngredientID }) |
+        
+        @Html.ActionLink("Delete", "Delete", new { id = item.InventoryIngredientID })
+    </td>
+
+</tr>
+    }
+
+</table>

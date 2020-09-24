@@ -1,0 +1,31 @@
+﻿@model IngredientDB.Ingredient
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Weet je zeker dat je dit wil verwijderen?</h2>
+
+<table class="table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.name)</td>
+        <td>@Html.DisplayFor(model => model.name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.merk)</td>
+        <td>@Html.DisplayFor(model => model.merk)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.ingredientID)</td>
+        <td>@Html.DisplayFor(model => model.ingredientID)</td>
+    </tr>
+</table>
+
+
+
+<p>
+    
+    <button type="submit" value="Delete" class="btn btn-default" >delete</button>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

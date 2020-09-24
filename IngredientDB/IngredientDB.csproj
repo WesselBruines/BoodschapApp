@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DBingredient.cs" />
     <Compile Include="Ingredient.cs" />
+    <Compile Include="InventoryIngredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

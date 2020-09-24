@@ -188,6 +188,8 @@
     <Content Include="Views\Inventory\Edit.cshtml" />
     <Content Include="Views\Inventory\Delete.cshtml" />
     <Content Include="Views\Boodschap\Index.cshtml" />
+    <Content Include="Views\Boodschap\Toevoegen.cshtml" />
+    <Content Include="Views\Boodschap\AddInventory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

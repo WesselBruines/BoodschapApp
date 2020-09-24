@@ -13,5 +13,6 @@ namespace IngredientDB
         
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<InventoryIngredient> InventoryIngredients { get; set; }
+        public DbSet<BoodschapIngredient> BoodschapIngredients { get; set; }
     }
 }

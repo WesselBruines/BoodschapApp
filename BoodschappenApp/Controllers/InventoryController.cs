@@ -113,5 +113,7 @@ namespace BoodschappenApp.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        
     }
 }

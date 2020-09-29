@@ -12,8 +12,9 @@ namespace IngredientDB
 
         [Key]
         public int BoodschapIngredientID { get; set; }
-        public int IngredientID { get; set; }
-        public string Naam { get; set; }
+        [Required]
+        virtual public Ingredient ingredient { get; set; }
+       
         public double Hoeveelheid { get; set; }
         public string Eenheid { get; set; }
     }

@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace IngredientDB
 {
-   public class InventoryIngredient
+    public class RecipeIngredient
     {
+
         [Key]
-        public int InventoryIngredientID { get; set; }
+        public int RecipeIngredientID { get; set; }
         [Required]
-        virtual public Ingredient ingredient { get; set; }
-        
+       virtual public Ingredient ingredient { get; set; }
+
         public double Hoeveelheid { get; set; }
         public string Eenheid { get; set; }
     }

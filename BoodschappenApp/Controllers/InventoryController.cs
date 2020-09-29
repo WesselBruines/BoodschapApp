@@ -15,6 +15,7 @@ namespace BoodschappenApp.Controllers
         // GET: Inventory
         public ActionResult Index()
         {
+            
             return View(db.InventoryIngredients.ToList());
         }
 
@@ -31,10 +32,12 @@ namespace BoodschappenApp.Controllers
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
-            Ingredient ingredient = db.Ingredients.Find(id);
+            
             InventoryIngredient inventoryIngredient = new InventoryIngredient();
-            inventoryIngredient.IngredientID = ingredient.ingredientID;
-            inventoryIngredient.Naam = ingredient.name;
+            
+            inventoryIngredient.ingredient =db.Ingredients.Find(id);
+
+            ViewBag.IngredientID = id;
 
             return View(inventoryIngredient);
 
@@ -45,10 +48,12 @@ namespace BoodschappenApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AddInventory([Bind(Include = "InventoryingredientID,IngredientID,Naam,Hoeveelheid,Eenheid")] InventoryIngredient inventoryIngredient)
+        public ActionResult AddInventory([Bind(Include = "InventoryingredientID,ingredient,Hoeveelheid,Eenheid")] InventoryIngredient inventoryIngredient)
         {
             if (ModelState.IsValid)
             {
+                Ingredient ig = db.Ingredients.Find(inventoryIngredient.ingredient.ingredientID);
+            inventoryIngredient.ingredient = ig;
                 db.InventoryIngredients.Add(inventoryIngredient);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -77,10 +82,12 @@ namespace BoodschappenApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "InventoryingredientID,IngredientID,Naam,Hoeveelheid,Eenheid")] InventoryIngredient inventoryIngredient)
+        public ActionResult Edit([Bind(Include = "InventoryingredientID,Ingredient,Hoeveelheid,Eenheid")] InventoryIngredient inventoryIngredient)
         {
             if (ModelState.IsValid)
             {
+                Ingredient ig = db.Ingredients.Find(inventoryIngredient.ingredient.ingredientID);
+                inventoryIngredient.ingredient = ig;
                 db.Entry(inventoryIngredient).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

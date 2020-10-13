@@ -63,4 +63,4 @@ stages:
         azureSubscription: 'csharpopdracht-sc-w'
         appType: 'webApp'
         WebAppName: 'csharpopdracht-2232'
-        packageForLinux: '$(Build.artifactStagingDirectory)/**/BoodschappenApp.zip'
+        packageForLinux: '$(Build.artifactStagingDirectory)/**/*'
